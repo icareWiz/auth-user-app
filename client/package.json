@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:7000",
+  "proxy": "http://fixie:otf3nimnDHaCMil@velodrome.usefixie.com:80",
   "eslintConfig": {
     "extends": [
       "react-app",
