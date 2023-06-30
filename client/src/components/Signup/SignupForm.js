@@ -49,7 +49,6 @@ const SignupForm = () => {
             checkedConditions: checkboxInput.current?.checked,
         };
 
-
         const {pseudo, email, password, confirmEmail, checkedConditions} = data;
 
         if (!pseudo.match(pseudoPattern)) {
@@ -73,10 +72,8 @@ const SignupForm = () => {
             ok = false;
         }
 
-
         if (ok) {
             try {
-
                 await axios.post('/register', {pseudo, email, password}, {withCredentials: true})
                     .then(res => {
                         setCookies('_id', res.data.user._id, {
@@ -97,10 +94,8 @@ const SignupForm = () => {
                     } else {
                         setServerErr("Erreur 500. Le serveur ne répond pas")
                     }
-
                 }
         }
-
     }, []);
 
     const handleBlurConfirm = useCallback(() => {
@@ -118,7 +113,6 @@ const SignupForm = () => {
             input.current.className = "";
         }
     }, []);
-
 
     return (
         <Form onSubmit={handleSubmit}>

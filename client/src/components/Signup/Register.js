@@ -2,13 +2,10 @@ import React from 'react';
 import SignupForm from "./SignupForm";
 import styled from "@emotion/styled";
 
-const Register = ({loggedIn, setLoggedIn}) => {
+const Register = () => {
     return (
         <Main>
-            <SignupForm
-                loggedIn={loggedIn}
-                setLoggedIn={setLoggedIn}
-            />
+            <SignupForm />
 
             <div className={"importantInfos"}>
                 <p>* Cette application web est un exercice personnel, il n'y a aucune condition d'utilisation.</p>

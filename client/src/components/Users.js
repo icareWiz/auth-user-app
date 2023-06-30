@@ -33,7 +33,7 @@ const Users = () => {
                 })
     }, [userId])
 
-    const handleClick = useCallback(async () => {
+    const handleClickLogout = useCallback(async () => {
         removeCookies('_id', {path: '/'});
 
         try {
@@ -50,14 +50,13 @@ const Users = () => {
         } catch (error) {
             navigate('/404');
         }
-
     }, []);
 
     return (
         <UsersContainer>
             <div className={"userInfosContainer"}>
                 <h2>Bienvenu {userData && userData.pseudo}</h2>
-                <p onClick={handleClick} className={"logout"}><LogoutSVG/>Déconnexion</p>
+                <p onClick={handleClickLogout} className={"logout"}><LogoutSVG/>Déconnexion</p>
             </div>
             <h1>Liste des utilisateurs inscrits :</h1>
 
@@ -69,16 +68,16 @@ const Users = () => {
                             {
                                 Object.entries(user).map(([key, value], index) => (
 
-                                    key === 'pseudo' ? <p className={"pseudo"} key={index}>Pseudo : {value}</p>
-                                        : <p className={"email"} key={index}>Email : {value}</p>
-
+                                    key === 'pseudo' ?
+                                        <p className={"pseudo"} key={index}>Pseudo : {value}</p>
+                                                     :
+                                        <p className={"email"} key={index}>Email : {value}</p>
                                 ))
                             }
                         </div>
                     )
                 })
             }
-
         </UsersContainer>
     )
 };

@@ -1,17 +1,11 @@
-import React, {memo, useState} from 'react';
+import React, {memo} from 'react';
 import styled from "@emotion/styled";
-import {NavLink} from "react-router-dom";
 
-const Button =  memo(({content, id, type, to, className, navigate}) => {
+const Button =  memo(({content, type, className}) => {
     return (
         <>
-            <Btn className={className} id={id} type={type}>
-                {
-                    navigate ?
-                    <NavLink to={to}>{content}</NavLink>
-                        :
-                        content
-                }
+            <Btn className={className} type={type}>
+                { content }
             </Btn>
         </>
     );
