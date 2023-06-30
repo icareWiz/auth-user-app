@@ -11,3 +11,4 @@ Etapes de test de l'application:
 - Télécharger le dossier zip et l'ouvrir avec son éditeur de code préféré
 - Remplacer la variable d'environnement "DB_URI" par votre uri de connexion à MongoDB
 - Lancer "npm run server"
+- Dans la barre de recherche de votre navigateur, taper "localhost:7000"
