@@ -1,7 +1,7 @@
 Environnement de travail : 
 - Express
 - Mongoose
-- MongoDB
+- React
 
 - PostMan
 - MongoDb Compass
