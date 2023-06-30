@@ -10,6 +10,6 @@ router.post('/login', login)
 // the protect function controls data access
 router.get('/authorization:id/users', protect, getAllUsers)
 router.get('/profils/user/:id', protect, getOne);
-router.get('/user/:id/logout', logout);
+router.get('/user/:id/logout',protect, logout);
 
 module.exports = router;

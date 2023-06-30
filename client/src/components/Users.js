@@ -16,7 +16,7 @@ const Users = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-            axiosInstance.get(`/authorization${userId}/users`, {withCredentials: true})
+            axios.get(`/authorization${userId}/users`, {withCredentials: true})
                 .then(res => {
                     setUsers(res.data.data.users)
                 })
@@ -28,7 +28,7 @@ const Users = () => {
                         navigate('/404');
                     }
                 });
-            axiosInstance.get(`/profils/user/${userId}`, {withCredentials: true})
+            axios.get(`/profils/user/${userId}`, {withCredentials: true})
                 .then(res => {
                     setUserData(res.data.data.user)
                 })

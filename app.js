@@ -28,9 +28,9 @@ app.use(xss());
 app.use(helmet());
 
 app.use(cors({
-    origin: 'https://auth-user-app-84eaef9ec7b6.herokuapp.com/',
+    origin: 'https://auth-user-app-84eaef9ec7b6.herokuapp.com',
     credentials: true,
-    optionsSuccessStatus: 200
+    optionsSuccessStatus: 200,
 }));
 
 // routes
