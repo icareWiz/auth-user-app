@@ -28,7 +28,7 @@ app.use(xss());
 app.use(helmet());
 
 app.use(cors({
-    origin: 'https://auth-user-app-84eaef9ec7b6.herokuapp.com',
+    origin: 'http://localhost3000',
     credentials: true,
     optionsSuccessStatus: 200,
 }));
