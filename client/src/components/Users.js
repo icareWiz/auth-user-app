@@ -4,7 +4,6 @@ import {useCookies} from "react-cookie";
 import styled from "@emotion/styled";
 import {ReactComponent as LogoutSVG} from "../assets/svg/grommet-icons_logout.svg";
 import {useNavigate} from "react-router-dom";
-import {axiosInstance} from "../utils/AxiosInstance";
 
 const Users = () => {
     const [cookies, setCookies, removeCookies] = useCookies(['_id','loggedOn']);

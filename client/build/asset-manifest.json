@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/static/js/main.c7b71ef5.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/open_eye.svg": "/static/media/open_eye.752d028cd04e102457ca97d76620bc39.svg",
+    "static/media/close_eye.svg": "/static/media/close_eye.05b2198d89c04d563147dbaad98f672f.svg",
+    "index.html": "/index.html",
+    "static/media/lock.svg": "/static/media/lock.09790b24588303bfbc67d592e72d8925.svg",
+    "static/media/emailsvg.svg": "/static/media/emailsvg.51174e91b57abe9e8fefb5e1958b0e47.svg",
+    "static/media/ic_round-person.svg": "/static/media/ic_round-person.fbe8862f1e429afa99d23d516cdb6a3c.svg",
+    "static/media/grommet-icons_logout.svg": "/static/media/grommet-icons_logout.2edeb72bada73fad92b1682409c38957.svg",
+    "main.c7b71ef5.js.map": "/static/js/main.c7b71ef5.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c7b71ef5.js"
+  ]
+}
