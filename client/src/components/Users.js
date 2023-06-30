@@ -4,17 +4,19 @@ import {useCookies} from "react-cookie";
 import styled from "@emotion/styled";
 import {ReactComponent as LogoutSVG} from "../assets/svg/grommet-icons_logout.svg";
 import {useNavigate} from "react-router-dom";
+import {axiosInstance} from "../utils/AxiosInstance";
 
-const Users = ({userData}) => {
+const Users = () => {
     const [cookies, setCookies, removeCookies] = useCookies(['_id','loggedOn']);
     const userId = cookies._id;
 
     const [users, setUsers] = useState([]);
+    const [userData, setUserData] = useState();
 
     const navigate = useNavigate();
 
     useEffect(() => {
-            axios.get(`/authorization${userId}/users`, {withCredentials: true})
+            axiosInstance.get(`/authorization${userId}/users`, {withCredentials: true})
                 .then(res => {
                     setUsers(res.data.data.users)
                 })
@@ -25,6 +27,10 @@ const Users = ({userData}) => {
                     } else if (error.message.includes("403")) {
                         navigate('/404');
                     }
+                });
+            axiosInstance.get(`/profils/user/${userId}`, {withCredentials: true})
+                .then(res => {
+                    setUserData(res.data.data.user)
                 })
     }, [userId])
 

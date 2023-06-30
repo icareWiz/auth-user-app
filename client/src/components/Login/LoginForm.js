@@ -181,11 +181,13 @@ const Form = styled.form`
 
   p {
     font-size: max(1.2rem, 1.4rem);
-    margin: 15px 0 30px;
+    margin: 15px 0 20px;
+    padding: 0 10px;
   }
 
   hr {
     width: 90%;
+    margin-top: 10px;
   }
 
   .signupBtn {
